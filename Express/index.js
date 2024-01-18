@@ -160,7 +160,7 @@ const app = express();
 
 
 
-3
+
 
 
 
@@ -169,10 +169,10 @@ const app = express();
 
 //another zod schema example
 const schema = zod.object({
-    email: z.string(),
-    password: z.string(),
-    country: z.literal("IN").or(z.literal("US")),
-    kidneys: z.array(zod.number)
+    email: zod.string(),
+    password: zod.string(),
+    country: zod.literal("IN").or(zod.literal("US")),
+    kidneys: zod.array(zod.number)
 
 })
 
