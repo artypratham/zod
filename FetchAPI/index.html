@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fetch api</title>
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+</head>
+
+<script>
+
+
+//Method 1 of writing a promise
+//     function getAnimalData()  {
+//         const response = fetch("https://fakerapi.it/api/v1/persons")
+//         .then(function(response){
+//                 response.json()
+//                     .then(function(finalData){
+//                         console.log(finalData)
+//                     })
+//         })
+//    }
+
+
+
+
+//Method 2 (cleaner) for writing a promise 
+   async function getAnimalData() {
+    const response = await fetch("https://fakerapi.it/api/v1/persons");
+    const finalData = await response.json()
+        console.log(finalData);
+   }
+
+
+
+</script>
+
+<body>
+    <button onclick="getAnimalData()"> Get user Data</button>
+</body>
+</html>
